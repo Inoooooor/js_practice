@@ -48,14 +48,15 @@ function playFunc(playersChoice) {
       scorePlus();
   }
 
+  let getImgId = document.getElementById('heroImg');
   if (scoreNum >= 2 && scoreNum < 4) 
-    document.getElementById('heroImg').src = 'images/mr_ascend.png';
+    getImgId.src = 'images/mr_ascend.png';
   else if (scoreNum > -2 && scoreNum < 2) 
-    document.getElementById('heroImg').src = 'images/mr_start.png';
+    getImgId.src = 'images/mr_start.png';
   else if (scoreNum <= -2 && scoreNum > -5) 
-    document.getElementById('heroImg').src = 'images/mr_black.png';
+    getImgId.src = 'images/mr_black.png';
   else if (scoreNum <= -5)
-    document.getElementById('heroImg').src = 'images/mr_dead.png';
+    getImgId.src = 'images/mr_dead.png';
   else if (scoreNum >= 4)
-    document.getElementById('heroImg').src = 'images/mr_god.jpg';
+    getImgId.src = 'images/mr_god.jpg';
 }
