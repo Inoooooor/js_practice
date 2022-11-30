@@ -16,7 +16,7 @@ function scoreMinus() {
 }
 
 function opponentsChoice() {
-  let numForChoice = Math.floor((Math.random() * 10)) % 3;
+  let numForChoice = Math.floor((Math.random() * 3)) % 3;
   const opponentsArr = ["rock", "paper", "scissors"];
   document.querySelector('.rand').innerHTML = opponentsArr[numForChoice];
   return opponentsArr[numForChoice];
