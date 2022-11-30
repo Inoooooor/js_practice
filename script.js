@@ -40,8 +40,8 @@ function playFunc(playersChoice) {
   const rock = "rock", paper = "paper", scissors = "scissors";
   let wonOrLost = ".won_lost";
   let opponentChoiceVar = opponentsChoice();
-  console.log(playersChoice.id);
-  console.log(opponentChoiceVar);
+  // console.log(playersChoice.id);
+  // console.log(opponentChoiceVar);
   if (playersChoice.id == rock && opponentChoiceVar == rock) {
     document.querySelector(wonOrLost).innerHTML = tie;
   } else if (playersChoice.id == rock && opponentChoiceVar == paper) {
