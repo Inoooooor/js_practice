@@ -4,7 +4,6 @@
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
-        <script src="script.js"></script>
     </head>
     <body>
         <section class="screen">
@@ -22,7 +21,7 @@
                 <img src="images/gigachad.png" alt="Opponent's status">
             </div>
             <div class="score_count">
-                <p>Score: <p class="count_num"></p></p>
+                <p>Score: <span class="count_num"></span></p>
             </div>
             <div class="buttons">
                 <!-- <button type="submit" id="rock" onclick="alerted()";>Rock</button> -->
@@ -31,13 +30,14 @@
                 <input value="Scissors" type="button" id="scissors" onclick="playFunc(this)">
             </div>
             <div class="opponents_choice">
-                <p>He chooses: <p class="rand"></p></p>
+                <p>He chooses: <span class="rand"></span></p>
             </div>
             <div class="result"><p class="won_lost"></p></div>
             <div class="sum"></div>
             <!-- <button type="submit" id="submit" onclick="scoreCount()">Score</button> -->
             <!-- <button class="rand" type="submit" id="submit" onclick="opponentsChoice()">Random</button> -->
-
+            
         </section>
     </body>
+    <script src="script.js"></script>
     </html>

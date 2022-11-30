@@ -74,7 +74,7 @@ img {
 .opponents_choice {
     grid-area: 8 / 7 / 9 / 9;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-end;
 }
 .score_count {

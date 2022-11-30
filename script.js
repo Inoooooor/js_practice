@@ -1,5 +1,6 @@
 let scoreNum = 0;
-
+document.querySelector('.count_num').innerHTML = scoreNum;
+document.querySelector(".won_lost").innerHTML = "Fight!";
 function myFunction(x) {
   x.classList.toggle("change");
 }
@@ -24,39 +25,39 @@ function opponentsChoice() {
 function playFunc(playersChoice) {
   const win = "You win", lose = "You lose", tie = "It's a tie";
   const rock = "rock", paper = "paper", scissors = "scissors";
-  let wonOrLost = document.querySelector(".won_lost");
+  const gameResult = document.querySelector(".won_lost");
   let opponentChoiceVar = opponentsChoice();
   if (playersChoice.id == opponentChoiceVar) {
-    wonOrLost.innerHTML = tie;
+    gameResult.innerHTML = tie;
   } else if (playersChoice.id == rock && opponentChoiceVar == paper) {
-      wonOrLost.innerHTML = lose;
+      gameResult.innerHTML = lose;
       scoreMinus();
   } else if (playersChoice.id == rock && opponentChoiceVar == scissors) {
-      wonOrLost.innerHTML = win;
+      gameResult.innerHTML = win;
       scorePlus();
   } else  if (playersChoice.id == paper && opponentChoiceVar == rock) {
-      wonOrLost.innerHTML = win;
+      gameResult.innerHTML = win;
       scorePlus();
   } else if (playersChoice.id == paper && opponentChoiceVar == scissors) {
-      wonOrLost.innerHTML = lose;
+      gameResult.innerHTML = lose;
       scoreMinus();
   } else if (playersChoice.id == scissors && opponentChoiceVar == rock) {
-      wonOrLost.innerHTML = lose;
+      gameResult.innerHTML = lose;
       scoreMinus();
   } else if (playersChoice.id == scissors && opponentChoiceVar == paper) {
-      wonOrLost.innerHTML = win;
+      gameResult.innerHTML = win;
       scorePlus();
   }
 
-  let getImgId = document.getElementById('heroImg');
+  const playerImage = document.getElementById('heroImg');
   if (scoreNum >= 2 && scoreNum < 4) 
-    getImgId.src = 'images/mr_ascend.png';
+    playerImage.src = 'images/mr_ascend.png';
   else if (scoreNum > -2 && scoreNum < 2) 
-    getImgId.src = 'images/mr_start.png';
+    playerImage.src = 'images/mr_start.png';
   else if (scoreNum <= -2 && scoreNum > -5) 
-    getImgId.src = 'images/mr_black.png';
+    playerImage.src = 'images/mr_black.png';
   else if (scoreNum <= -5)
-    getImgId.src = 'images/mr_dead.png';
+    playerImage.src = 'images/mr_dead.png';
   else if (scoreNum >= 4)
-    getImgId.src = 'images/mr_god.jpg';
+    playerImage.src = 'images/mr_god.jpg';
 }
