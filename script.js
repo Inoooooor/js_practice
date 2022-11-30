@@ -42,7 +42,7 @@ function playFunc(playersChoice) {
   let opponentChoiceVar = opponentsChoice();
   // console.log(playersChoice.id);
   // console.log(opponentChoiceVar);
-  if (playersChoice.id == rock && opponentChoiceVar == rock) {
+  if (playersChoice.id == opponentChoiceVar) {
     document.querySelector(wonOrLost).innerHTML = tie;
   } else if (playersChoice.id == rock && opponentChoiceVar == paper) {
       document.querySelector(wonOrLost).innerHTML = lose;
@@ -53,13 +53,9 @@ function playFunc(playersChoice) {
   } else  if (playersChoice.id == paper && opponentChoiceVar == rock) {
       document.querySelector(wonOrLost).innerHTML = win;
       scorePlus();
-  } else if (playersChoice.id == paper && opponentChoiceVar == paper) {
-      document.querySelector(wonOrLost).innerHTML = tie;
   } else if (playersChoice.id == paper && opponentChoiceVar == scissors) {
       document.querySelector(wonOrLost).innerHTML = lose;
       scoreMinus();
-  } else if (playersChoice.id == scissors && opponentChoiceVar == scissors) {
-      document.querySelector(wonOrLost).innerHTML = tie;
   } else if (playersChoice.id == scissors && opponentChoiceVar == rock) {
       document.querySelector(wonOrLost).innerHTML = lose;
       scoreMinus();
