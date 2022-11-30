@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <section class="screen">
+            <div class="container" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div class="hero_img">
+                <p>You</p>
+                <img id="heroImg" class="heroImg" src="images/mr_start.png" alt="Your status">
+            </div>
+            <div class="gigachad_img">
+                <p>Your Opponent</p>
+                <img src="images/gigachad.png" alt="Opponent's status">
+            </div>
+            <div class="score_count">
+                <p>Score: <p class="count_num"></p></p>
+            </div>
+            <div class="buttons">
+                <!-- <button type="submit" id="rock" onclick="alerted()";>Rock</button> -->
+                <input value="Rock" type="button" id="rock" onclick="playFunc(this)">
+                <input value="Paper" type="button" id="paper" onclick="playFunc(this)">
+                <input value="Scissors" type="button" id="scissors" onclick="playFunc(this)">
+            </div>
+            <div class="opponents_choice">
+                <p>He chooses: <p class="rand"></p></p>
+            </div>
+            <div class="result"><p class="won_lost"></p></div>
+            <div class="sum"></div>
+            <!-- <button type="submit" id="submit" onclick="scoreCount()">Score</button> -->
+            <!-- <button class="rand" type="submit" id="submit" onclick="opponentsChoice()">Random</button> -->
+
+        </section>
+    </body>
+    </html>
